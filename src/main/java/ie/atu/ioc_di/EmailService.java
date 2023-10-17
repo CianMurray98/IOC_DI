@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 public class EmailService {
 
     public String sendEmail(String to, String message) {
-        // Implement email sending logic
-        //System.out.println("Sending email to: " + to + "\nSubject: " + subject + "\nBody: " + body);
         return message;
     }
 }
