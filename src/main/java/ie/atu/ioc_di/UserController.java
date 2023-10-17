@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 
             @GetMapping("/registerUser/{name}/{email}")
             public String registerUser(@PathVariable String name, @PathVariable String email) {
-                userService.registerUser(name, email);
-                return "User registered successfully!";
+                return userService.registerUser(name, email);
         }
     }

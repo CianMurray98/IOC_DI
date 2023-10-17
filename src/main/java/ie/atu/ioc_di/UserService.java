@@ -13,10 +13,10 @@ public class UserService {
         this.emailService = emailService;
     }
 
-    public void registerUser(String name, String email) {
-        // Perform user registration logic
+    public String registerUser(String name, String email) {
+        String message = emailService.sendEmail(email, "welcome\t" + name + "\t" + email);
 
         // Send confirmation email
-        emailService.sendEmail(email, "Registration Confirmation", "Welcome, " + name + "!");
+        return emailService.sendEmail(email, "Registration Confirmation" + name + "!");
     }
 }
